@@ -7,6 +7,7 @@ Vagrant.configure(2) do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
+  # eg. You can connect to Service Fabric Explorer at http://192.168.50.50:19080/Explorer.
   config.vm.network "private_network", ip: "192.168.50.50"
 
   # Share an additional folder to the guest VM. The first argument is
@@ -20,6 +21,7 @@ Vagrant.configure(2) do |config|
     vb.memory = "2048"
   end
 
+  # Set up the onebox cluster on the VM
   config.vm.provision "shell", inline:
     "/bin/sh /opt/microsoft/sdk/servicefabric/clustersetup/devclustersetup.sh"
 end
