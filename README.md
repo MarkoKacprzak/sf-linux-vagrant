@@ -14,3 +14,7 @@ This repo contains a Vagrant definition for setting up a Ubuntu 15.10-based oneb
 3. Run 'vagrant ssh' to connect to the VM.
 
 By default, the Vagrantfile creates a private network at 192.168.50.50. You can connect to Service Fabric Explorer at http://192.168.50.50:19080/Explorer.
+
+## Joining the Service Fabric Linux preview program
+
+If you happened upon this repo and are interested in officially joining the Service Fabric Linux preview, please follow the instructions [here](http://aka.ms/sflinux).
