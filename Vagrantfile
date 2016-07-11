@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "azureservicefabric/linuxonebox_0.3.0.1"
-  config.vm.box_url = "https://servicefabricsdkpreview.blob.core.windows.net/linux/sflinuxonebox-20160708.box"
+  config.vm.box = "azureservicefabric/linuxonebox_tp3_refresh"
+  config.vm.box_url = "http://aka.ms/sflinuxvagrantonebox"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -16,9 +16,9 @@ Vagrant.configure(2) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
-  # Service Fabric onebox environments require at least 2GB of memory to run
+  # We recommend allocating at least 3GB to the Service Fabric onebox environment
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"
+    vb.memory = "3072"
   end
 
   # Set up the onebox cluster on the VM
