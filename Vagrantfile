@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "azureservicefabric/linuxonebox_tp3"
-  config.vm.box_url = "http://aka.ms/sflinuxvagrantonebox"
+  config.vm.box = "azureservicefabric/linuxonebox_0.3.0.1"
+  config.vm.box_url = "https://servicefabricsdkpreview.blob.core.windows.net/linux/sflinuxonebox-20160708.box"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -23,5 +23,5 @@ Vagrant.configure(2) do |config|
 
   # Set up the onebox cluster on the VM
   config.vm.provision "shell", inline:
-    "/bin/sh /opt/microsoft/sdk/servicefabric/clustersetup/devclustersetup.sh"
+    "sudo bash /opt/microsoft/sdk/servicefabric/clustersetup/devclustersetup.sh"
 end
