@@ -4,8 +4,8 @@ This repo contains a Vagrant definition for setting up a Ubuntu 15.10-based oneb
 
 ## Prerequisites
 
-* [Vagrant](https://www.vagrantup.com/downloads.html)
-* [VirtualBox] (https://www.virtualbox.org/wiki/Downloads)
+* [Vagrant (v1.8.4 or later)](https://www.vagrantup.com/downloads.html)
+* [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 ## Instructions
 
