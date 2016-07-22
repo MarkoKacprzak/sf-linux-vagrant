@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.box = "azureservicefabric/linuxonebox_tp3_refresh"
-  config.vm.box_url = "http://aka.ms/sflinuxvagrantonebox"
+  config.vm.box = "azureservicefabric/linuxonebox_0.4.0.0"
+  config.vm.box_url = "https://servicefabricsdkpreview.blob.core.windows.net/linux/sflinuxonebox_0.4.0.0.box"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
