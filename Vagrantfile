@@ -1,8 +1,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+$script = <<SCRIPT
+rm -rf /vagrant/tmp/lib
+mkdir -p /vagrant/tmp/lib
+cp -var /opt/microsoft/sdk/servicefabric/java/packages/lib/ /vagrant/tmp/
+SCRIPT
+
 Vagrant.configure(2) do |config|
-  config.vm.box = "azureservicefabric/linuxonebox_0.6.0.0"
+  config.vm.box = "azureservicefabric/dev.tp6"
   config.vm.box_url = "https://servicefabricsdkpreview.blob.core.windows.net/linux/azuresfonebox-tp6.box"
 
   # Create a private network, which allows host-only access to the machine
@@ -23,5 +29,5 @@ Vagrant.configure(2) do |config|
 
   # Set up the onebox cluster on the VM
   config.vm.provision "shell", inline:
-    "sudo bash /opt/microsoft/sdk/servicefabric/clustersetup/devclustersetup.sh"
+    "sudo bash /opt/microsoft/sdk/servicefabric/common/clustersetup/devclustersetup.sh"
 end
