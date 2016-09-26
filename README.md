@@ -1,6 +1,6 @@
 # Vagrant setup for Service Fabric on Linux
 
-This repo contains a Vagrant definition for setting up a Ubuntu 15.10-based onebox for Service Fabric.
+This repo contains a Vagrant definition for setting up a Ubuntu 16.04-based onebox for Service Fabric.
 
 ## Prerequisites
 
